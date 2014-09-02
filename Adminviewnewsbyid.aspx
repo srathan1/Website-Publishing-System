@@ -1,0 +1,401 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="Adminviewnewsbyid.aspx.cs" Inherits="Adminviewnewsbyid" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+    .style1
+    {
+        width: 100%;
+    }
+    .style2
+    {
+        height: 34px;
+    }
+    .style3
+    {
+        height: 25px;
+    }
+    .style4
+    {
+        height: 26px;
+    }
+</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <table class="style1">
+    <tr>
+        <td class="style2" colspan="15">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="View News By News Id" 
+                Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="style3" colspan="15">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label2" runat="server" Text="Select News ID"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="ddlnewsid" runat="server" DataSourceID="SqlDataSource1" 
+                DataTextField="newsid" DataValueField="newsid" Height="22px" Width="128px" 
+                AutoPostBack="True">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:wpsConnectionString %>" 
+                SelectCommand="SELECT [newsid] FROM [news]"></asp:SqlDataSource>
+&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="style3" colspan="15">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                DataKeyNames="newsid" DataSourceID="SqlDataSource2" Width="932px">
+                <Columns>
+                    <asp:BoundField DataField="newsid" HeaderText="newsid" ReadOnly="True" 
+                        SortExpression="newsid" />
+                    <asp:BoundField DataField="newsdescription" HeaderText="newsdescription" 
+                        SortExpression="newsdescription" />
+                    <asp:BoundField DataField="divid" HeaderText="divid" SortExpression="divid" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:wpsConnectionString %>" 
+                SelectCommand="SELECT * FROM [news] WHERE ([newsid] = @newsid)">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ddlnewsid" Name="newsid" 
+                        PropertyName="SelectedValue" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td class="style4" colspan="15">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="15">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>
+    </tr>
+</table>
+</asp:Content>
+

@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    &nbsp;WEBSITE PUBLISHING SYSTEM
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <br />
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:LinkButton ID="lbtnlogout" runat="server" PostBackUrl="~/Home.aspx">Logout</asp:LinkButton>
+                <br />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Adminhome.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Division" Value="Division" Selectable="False">
+                            <asp:MenuItem Text="View Division" Value="View Division" 
+                                NavigateUrl="~/Adminviewdivision.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Add New Division" Value="Add New Division" 
+                                NavigateUrl="~/Adminadddivision.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Employees" Value="Employees" Selectable="False">
+                            <asp:MenuItem Text="View Employees" Value="View Employees" Selectable="False">
+                                <asp:MenuItem NavigateUrl="~/Adminviewempid.aspx" Text="View By Id" 
+                                    Value="View By Id"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Adminviewempdbydivid.aspx" Text="View By Division" 
+                                    Value="View By Division"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Adminaddemployee.aspx" Text="Add New Employees" 
+                                Value="Add New Employees"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Products" Value="Products" Selectable="False">
+                            <asp:MenuItem Text="View Products" Value="View Products" Selectable="False">
+                                <asp:MenuItem Text="Products by ID" Value="Products by ID" 
+                                    NavigateUrl="~/Adminviewproductsbyid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Products by Division" Value="Products by Division" 
+                                    NavigateUrl="~/Adminviewproductsbydivid.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Add New Products" Value="Add New Products" 
+                                NavigateUrl="~/Adminaddnewproducts.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="News" Value="News" Selectable="False">
+                            <asp:MenuItem Text="View News" Value="View News" Selectable="False">
+                                <asp:MenuItem Text="News By Id" Value="News By Id" 
+                                    NavigateUrl="~/Adminviewnewsbyid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="News By Division" Value="News By Division" 
+                                    NavigateUrl="~/Adminviewnewsbydiv.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Add News" Value="Add News" 
+                                NavigateUrl="~/Adminaddnews.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Events" Value="Events" Selectable="False">
+                            <asp:MenuItem Text="View Events" Value="View Events" Selectable="False">
+                                <asp:MenuItem Text="Events By Id" Value="Events By Id" 
+                                    NavigateUrl="~/Adminvieweventsbyid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Events By Division" Value="Events By Division" 
+                                    NavigateUrl="~/Adminvieweventsbydiv.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Add New Event" Value="Add New Event" 
+                                NavigateUrl="~/Adminaddevents.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Careers" Value="Careers" Selectable="False">
+                            <asp:MenuItem Text="View Careers" Value="View Careers" 
+                                NavigateUrl="~/Adminviewcareers.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Add Careers" Value="Add Careers" 
+                                NavigateUrl="~/Adminaddcareers.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Feedback" Value="Feedback" Selectable="False">
+                            <asp:MenuItem Text="View Feedback" Value="View Feedback" 
+                                NavigateUrl="~/Adminfeedback.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+            <p style="bottom: 1cm; width: 922px;">
+                <span class="Apple-style-span" 
+                    style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium;">
+                <span class="Apple-style-span" 
+                    style="font-family: 'Times New Roman', Times, serif; text-align: justify; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-size: small;">
+                <b><span style="font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                Copyrights Info&nbsp; © 2011
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">ECIL - Electronics Corporation of India limited</asp:HyperLink>
+                &nbsp;, Hyderabad, India.</span></b></span></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
+

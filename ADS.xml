@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+
+    <Ad>
+        <ImageUrl>Upload/M85P13  Universal Electronic Time Fuze.GIF</ImageUrl>
+        <NavigateUrl>~/products.aspx</NavigateUrl>
+        <AlternateText> Welcome</AlternateText>
+        <Impressions>14</Impressions>
+        <Keyword>welcome</Keyword>
+    </Ad>
+
+    <Ad>
+        <ImageUrl>Upload/Nucleonic Moisture Gauge.JPG</ImageUrl>
+        <NavigateUrl>~/pro.aspx</NavigateUrl>
+        <AlternateText> ECIL</AlternateText>
+        <Impressions>14</Impressions>
+        <Keyword>home</Keyword>
+    </Ad>
+
+    
+    <Ad>
+        <ImageUrl>Upload/Contamination Monitor.JPG</ImageUrl>
+        <NavigateUrl>~/pro.aspx</NavigateUrl>
+        <AlternateText>SPACE</AlternateText>
+        <Impressions>14</Impressions>
+        <Keyword>Security</Keyword>
+    </Ad>
+
+   
+
+</Advertisements>

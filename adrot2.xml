@@ -1,0 +1,60 @@
+﻿<Advertisements>
+
+  <Ad>
+    <ImageUrl>ads/1.jpeg</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> Welcome</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>welcome</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>ads/2.gif</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> ECIL</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>home</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>ads/3.gif</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> Defence</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>defence</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>ads/4.gif</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> Space</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>Security</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>ads/5.gif</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> Nuclear</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>Nuclear</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>ads/6.jpeg</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> Security</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>Security</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>ads/7.jpeg</ImageUrl>
+    <NavigateUrl>Pdiv.aspx</NavigateUrl>
+    <AlternateText> IT and e-Gov</AlternateText>
+    <Impressions>14</Impressions>
+    <Keyword>IT and e-Gov</Keyword>
+  </Ad>
+
+</Advertisements>
+

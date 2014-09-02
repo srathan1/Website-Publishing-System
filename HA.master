@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HA.master.cs" Inherits="HA" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    &nbsp;WEBSITE PUBLISHING SYSTEM
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <br />
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:LinkButton ID="lbtnlogout" runat="server" PostBackUrl="~/Home.aspx">Logout</asp:LinkButton>
+
+                <br />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Hahome.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Divisions" Value="Divisions" 
+                            NavigateUrl="~/Hadivision.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Employees" Value="Employees" 
+                            NavigateUrl="~/Haemployees.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Products" Value="Products" Selectable="False">
+                            <asp:MenuItem Text="View Products" Value="View Products" Selectable="False">
+                                <asp:MenuItem Text="Products by ID" Value="Products by ID" 
+                                    NavigateUrl="~/Haviewproductsbyid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Products by Division" Value="Products by Division" 
+                                    NavigateUrl="~/Haviewproductsbydiv.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Add New Products" Value="Add New Products" 
+                                NavigateUrl="~/Haaddnewproducts.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="News" Value="News" Selectable="False">
+                            <asp:MenuItem Text="View News" Value="View News" Selectable="False">
+                                <asp:MenuItem Text="News By Id" Value="News By Id" 
+                                    NavigateUrl="~/Haviewnewsbyid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="News By Division" Value="News By Division" 
+                                    NavigateUrl="~/Haviewnewsbydiv.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Add News" Value="Add News" 
+                                NavigateUrl="~/Haaddnews.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Events" Value="Events" Selectable="False">
+                            <asp:MenuItem Text="View Events" Value="View Events" Selectable="False">
+                                <asp:MenuItem Text="Events By Id" Value="Events By Id" 
+                                    NavigateUrl="~/Havieweventsbyid.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Events By Division" Value="Events By Division" 
+                                    NavigateUrl="~/Havieweventsbydiv.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Add New Event" Value="Add New Event" 
+                                NavigateUrl="~/Haaddevents.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <br />
+        </div>
+        <div class="clear">
+            <p style="bottom: 1cm; width: 922px;">
+                <span class="Apple-style-span" 
+                    style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium;">
+                <span class="Apple-style-span" 
+                    style="font-family: 'Times New Roman', Times, serif; text-align: justify; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-size: small;">
+                <b><span style="font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                Copyrights Info&nbsp; © 2011
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">ECIL - Electronics Corporation of India limited</asp:HyperLink>
+                &nbsp;, Hyderabad, India.</span></b></span></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
